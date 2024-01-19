@@ -1,0 +1,23 @@
+<%- include("partials/header.ejs") %>
+
+
+    <div class="contanier-xxl">
+        <% if (locals.namee && locals.quize) { %>
+            <h1 class="h"><%=locals.namee %></h1>
+            <p class="q"><%=  locals.quize%></p>
+        <% } else { %>
+
+            <h1 class="h">name and quiz Generator</h1>
+            <p class="q"></p>
+        <% } %>
+        <form action="/submit" method="POST">
+            <button type="submit">Generate</button>
+        </form>
+        
+    </div>
+
+
+
+
+
+    <%- include("partials/footer.ejs") %>
